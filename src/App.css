@@ -1,0 +1,151 @@
+:root {
+  background-image: url('./images/background.svg');
+  background-repeat:no-repeat;
+  -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+  background-position: center;
+  background-size: cover;
+min-height: 100vh;
+overflow: hidden;
+line-height: 1.5;;
+}
+
+.header {
+  padding-top: 1.5%;
+  color: antiquewhite;
+  text-align: center;
+  font-size: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction:column;
+  padding-top: 2%;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  height: 100%;
+}
+
+
+.card-header {
+  align-self: center;
+  width: 99%;
+  color: antiquewhite;
+  border-style: solid;
+  border-bottom-style: none;
+  text-align: center;
+  background-color: rgba(26, 16, 61, 0.644);
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  border-style: solid;
+  border-color: antiquewhite;
+  width: 99%;
+  height: fit-content;
+  background-color: rgba(43, 35, 75, 0.226);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.col-head {
+  font-weight: bolder;
+  font-size: 20px;
+  border-bottom-style: solid;
+  padding-left: 10px;
+}
+
+.col {
+  color: antiquewhite;
+  width:250px;
+  height: fit-content;
+}
+
+.col-inv {
+  height: 100%;
+  width: 350px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.col-lrg {
+  width:400px;
+}
+
+.col-sml {
+  width: 200px;
+}
+
+.col-content {
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+
+.inv-img {
+  height: 20px;
+  
+  color: antiquewhite;
+ margin-left:5px;
+ margin-right: 5px;
+}
+
+.inv-content {
+  padding:5px;
+}
+
+.fis-content {
+  display: flex;
+}
+
+
+.white {
+  color: antiquewhite;
+}
+
+  
+.navbar {
+  font-size: 18px;
+text-decoration: none;
+color: antiquewhite;
+transition: 0.3s ease-in;
+}
+
+.highlight {
+font-size: 18px;
+text-decoration: none;
+cursor: default;
+color: antiquewhite;
+text-shadow: 0 0 30px antiquewhite;
+transition: 0.3s ease-out;
+}
+
+
+ul {
+padding: 0px;
+margin: 0px;
+text-align:center;
+vertical-align: center;
+}
+
+li {
+display: inline-block;
+margin-left: 25px;
+margin-right: 25px;
+font-weight: bolder;
+font-size: 30px;
+list-style-type: none;
+}
+
+.header-img {
+  height:100px;
+  -webkit-drop-shadow: 0px 0px 10px antiquewhite;
+  -moz-drop-shadow: 0px 0px 10px antiquewhite;
+  filter: drop-shadow(0px 0px 10px antiquewhite);
+}
