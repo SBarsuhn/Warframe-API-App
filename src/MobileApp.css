@@ -3,12 +3,12 @@
         padding-top: 1%;
         color: antiquewhite;
         text-align: center;
-        height: 50px;
+        height: 40px;
         margin: 20px;
 }
 
 .header-img-mob {
-    height:50px;
+    height:40px;
     -webkit-drop-shadow: 0px 0px 10px antiquewhite;
     -moz-drop-shadow: 0px 0px 10px antiquewhite;
     filter: drop-shadow(0px 0px 10px antiquewhite);
@@ -16,7 +16,7 @@
 
 .card-header-mob {
     align-self: center;
-    width: 99%;
+    width: 90%;
     color: antiquewhite;
     border-style: solid;
     border-bottom-style: none;
@@ -34,7 +34,7 @@
     border-style: solid;
     border-color: antiquewhite;
     color:antiquewhite;
-    width: 99%;
+    width: 90%;
     height: 60vh;
     background-color: rgba(43, 35, 75, 0.226);
     border-bottom-left-radius: 10px;
