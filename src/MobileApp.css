@@ -12,9 +12,9 @@
 
 .header-img-mob {
     height:30px;
-    -webkit-drop-shadow: 0px 0px 10px antiquewhite;
-    -moz-drop-shadow: 0px 0px 10px antiquewhite;
-    filter: drop-shadow(0px 0px 10px antiquewhite);
+    -webkit-drop-shadow: 0px 0px 20px antiquewhite;
+    -moz-drop-shadow: 0px 0px 20px antiquewhite;
+    filter: drop-shadow(0px 0px 20px antiquewhite);
 }
 
 .card-header-mob {
