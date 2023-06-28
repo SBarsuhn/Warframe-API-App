@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import MobileApp from './MobileApp';
 import reportWebVitals from './reportWebVitals';
+import { isMobile } from 'react-device-detect';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
-    <App />
-
+  <>
+  {isMobile ? <MobileApp /> : <App />}
+  {/* <MobileApp /> */}
+    </>
 );
 
 // If you want to start measuring performance in your app, pass a function

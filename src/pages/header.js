@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 import Nav from "./nav";
 import WWS from '../images/WWS.png'
 import WWS2 from '../images/WWS2.png'
@@ -19,7 +20,12 @@ function Header() {
 
     return (
         <>
-<div className='header'><img className="header-img" title="WARFRAME WORLD STATES" alt="WARFRAME WORLD STATE" src={title[currentImageIndex]}  /></div>
+        {isMobile ? 
+        <div className='header-mob'><img className="header-img-mob" title="WARFRAME WORLD STATES" alt="WARFRAME WORLD STATE" src={title[currentImageIndex]}  /></div>
+       :
+      <div className='header'><img className="header-img" title="WARFRAME WORLD STATES" alt="WARFRAME WORLD STATE" src={title[currentImageIndex]}  /></div>
+      } 
+
 {/* <Nav /> */}
 </>
     );
