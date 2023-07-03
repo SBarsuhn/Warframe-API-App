@@ -1,35 +1,40 @@
 #root {
     overflow: hidden;
-}
 
-.header-mob{
-        padding-top: 1%;
+
+  }
+  
+  .header-mob{
+        padding: 1%;
         color: antiquewhite;
+        border: solid antiquewhite;
+        background-color: rgba(26, 16, 61, 0.644);
         text-align: center;
         height: 30px;
         margin: 20px;
-}
-
-.header-img-mob {
-    height:30px;
-    -webkit-drop-shadow: 0px 0px 20px antiquewhite;
-    -moz-drop-shadow: 0px 0px 20px antiquewhite;
-    filter: drop-shadow(0px 0px 20px antiquewhite);
+      }
+      
+      .header-img-mob {
+        height:30px;
+        -webkit-drop-shadow: 0px 0px 2px antiquewhite;
+        -moz-drop-shadow: 0px 0px 2px antiquewhite;
+        filter: drop-shadow(0px 0px 2px antiquewhite);
 }
 
 .card-header-mob {
-    align-self: center;
-    width: 90%;
-    color: antiquewhite;
-    border-style: solid;
-    border-bottom-style: none;
-    text-align: center;
-    background-color: rgba(26, 16, 61, 0.644);
-    border-top-left-radius: 10px;
-    border-top-right-radius:10px;
-  }
+  font-family: 'Roboto', sans-serif;
+  align-self: center;
+  width: 90%;
+  color: antiquewhite;
+  border-style: solid;
+  border-bottom-style: none;
+  text-align: center;
+  background-color: rgba(26, 16, 61, 0.644);
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px;
+}
 
-  .card-mob {
+.card-mob {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -43,12 +48,12 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-
+  
 .container-mob {
 
     display: flex;
     flex-direction:column;
-    padding-top: 2%;
+    padding-top: 1%;
     padding-bottom: 2%;
     justify-content: center;
     width: fit-content;
@@ -57,9 +62,22 @@
   }
   
   .col-head-mob {
+    font-family: 'Kanit', sans-serif;
     font-weight: bolder;
     font-size: 20px;
-    border-bottom-style: solid;
     padding-left: 10px;
+    color: #0a0e12;
+    background-color: antiquewhite;
+  }
+
+  .col-content-mob {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+    margin: 10px;
+  }
+
+  .inv-content-mob {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
   }
   

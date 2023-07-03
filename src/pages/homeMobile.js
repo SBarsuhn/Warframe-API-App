@@ -83,6 +83,8 @@ const invasionRender = invasions.map((worldState, index) =>
 
 
 
+
+
   const fissureRender = fissures.map((worldState, index) =>
 !worldState.isHard && !worldState.isStorm? (
   <div className="fis-content-mob" key={index}>
@@ -134,7 +136,7 @@ type='checkbox'
   <div className="col-content-mob">{archonRender}</div>
   <header className="col-head-mob">SORTIE</header>
   <div className="col-content-mob">{sortieRender}</div>
-  <header className="col-head-mob">CETUS</header>
+  <header className="col-head-mob">PLAINS OF EIDOLON</header>
   <div className="col-content-mob">{cetusRender}</div>
   <header className="col-head-mob"> ORB VALLIS</header>
   <div className="col-content-mob">{vallisRender}</div>
@@ -142,7 +144,7 @@ type='checkbox'
   <div className="col-content-mob">{cambionRender}</div>
   <div className="col-mob col-inv-mob">
   <header className="col-head-mob">INVASIONS</header>
-  <div className="col-content-mob">{invasionRender}</div>
+  <div className="inv-content-mob">{invasionRender}</div>
   <div className="col-nw-mob">
   <header className="col-head-mob">NIGHTWAVE</header>
   <div className="col-content-mob">{nightwaveRender}</div>
