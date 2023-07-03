@@ -7,8 +7,6 @@
   .header-mob{
         padding: 1%;
         color: antiquewhite;
-        border: solid antiquewhite;
-        background-color: rgba(26, 16, 61, 0.644);
         text-align: center;
         height: 30px;
         margin: 20px;
@@ -22,7 +20,7 @@
 }
 
 .card-header-mob {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Kanit', sans-serif;
   align-self: center;
   width: 90%;
   color: antiquewhite;

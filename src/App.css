@@ -34,6 +34,7 @@ line-height: 1.5;;
 
 
 .card-header {
+  font-family: 'Kanit', sans-serif;
   align-self: center;
   width: 99%;
   color: antiquewhite;
@@ -59,6 +60,7 @@ line-height: 1.5;;
 }
 
 .col-head {
+  font-family: 'Kanit', sans-serif;
   font-weight: bolder;
   font-size: 20px;
   border-bottom-style: solid;
@@ -87,6 +89,7 @@ line-height: 1.5;;
 }
 
 .col-content {
+  font-family: 'Roboto', sans-serif;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
