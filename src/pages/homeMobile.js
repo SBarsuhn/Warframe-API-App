@@ -23,6 +23,8 @@ function HomeMobile() {
     function handleRefresh() {
       console.log("hello")
       window.location.reload(false);
+      return new Promise((done, err) => {
+})
     }
 
 
@@ -136,7 +138,7 @@ type='checkbox'
         <h2>CURRENT WORLD STATES</h2>
       </div>
       <div className="card-mob">
-      <PullToRefresh onRefresh={handleRefresh}>
+      <PullToRefresh   onRefresh={handleRefresh}>
       <div className="col-mob">
   <header className="col-head-mob">ARCHON HUNT</header>
   <div className="col-content-mob">{archonRender}</div>
