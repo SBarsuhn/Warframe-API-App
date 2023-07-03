@@ -122,11 +122,11 @@ const rjFissureRender = fissures.map((worldState, index) =>
 const sortieRender = sortie.map((worldState, index) => <div key={index}>{worldState.missionType} : {worldState.modifier}</div>)
 
 const nightwaveRender = nightwave.map((worldState, index) => <div key={index}>
-<input 
+{/* <input 
 type='checkbox'
 // checked={isChecked}
 // onChange={handleChange}
-/>
+/> */}
 {worldState.desc}
 </div>)
 
