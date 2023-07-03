@@ -9,8 +9,8 @@ import { isMobile } from 'react-device-detect';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-  {isMobile ? <MobileApp /> : <App />}
-  {/* <MobileApp /> */}
+  {/* {isMobile ? <MobileApp /> : <App />} */}
+  <MobileApp />
     </>
 );
 

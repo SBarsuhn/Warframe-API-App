@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import PullToRefresh from 'react-simple-pull-to-refresh';
 
 function HomeMobile() {
 
@@ -19,6 +20,10 @@ function HomeMobile() {
     //   setIsChecked(!isChecked)
     // }
 
+    function handleRefresh() {
+      console.log("hello")
+      window.location.reload(false);
+    }
 
 
   useEffect(() => {
@@ -131,6 +136,7 @@ type='checkbox'
         <h2>CURRENT WORLD STATES</h2>
       </div>
       <div className="card-mob">
+      <PullToRefresh onRefresh={handleRefresh}>
       <div className="col-mob">
   <header className="col-head-mob">ARCHON HUNT</header>
   <div className="col-content-mob">{archonRender}</div>
@@ -160,9 +166,9 @@ type='checkbox'
   <header className="col-head-mob">RJ FISSURES</header>
   <div className="col-content-mob">{rjFissureRender}</div>
   </div>
+      </PullToRefresh>
       </div>
       </div>
-
   );
 }
 

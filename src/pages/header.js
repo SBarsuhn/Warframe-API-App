@@ -20,11 +20,11 @@ function Header() {
 
     return (
         <>
-        {isMobile ? 
+        {/* {isMobile ?  */}
         <div className='header-mob'><img className="header-img-mob" title="WARFRAME WORLD STATES" alt="WARFRAME WORLD STATE" src={title[currentImageIndex]}  /></div>
-        :
+        {/* :
       <div className='header'><img className="header-img" title="WARFRAME WORLD STATES" alt="WARFRAME WORLD STATE" src={title[currentImageIndex]}  /></div>
-      }
+      } */}
 
 {/* <Nav /> */}
 </>
