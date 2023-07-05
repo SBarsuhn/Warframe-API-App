@@ -78,12 +78,13 @@ const cambionRender = <div>{activeCheck} for {forCheck}</div>
 
 
 const invasionRender = invasions.map((worldState, index) => 
+
 <div className="inv-content-mob" key={index}>
-  <a target='blank' href={`https://warframe.fandom.com/wiki/WARFRAME_Wiki${worldState.attackerReward.asString}`}>
+  <a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.rewardTypes[0]}`}>
 <img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
 </a>
 {worldState.attackingFaction} VS {worldState.defendingFaction} 
-<a target='blank' href={`https://warframe.fandom.com/wiki/WARFRAME_Wiki${worldState.defenderReward.asString}`}>
+<a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.rewardTypes[1]}`}>
 <img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
 </a> 
 </div>)
