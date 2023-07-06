@@ -71,7 +71,37 @@ const cambionRender = <div>{activeCheck} for {forCheck}</div>
 
 
 const invasionRender = invasions.map((worldState, index) => 
+worldState.attackingFaction === "Infested" && worldState.defenderReward.asString === "Mutalist Alad V Nav Coordinate"? (<div className="inv-content" key={index}>
+<a target='blank' href={`https://warframe.fandom.com/wiki/Credits`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction} VS {worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/wiki/Mutalist_Alad_V_Nav_Coordinate`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>) 
+: worldState.attackingFaction === "Infested"? (
 <div className="inv-content" key={index}>
+  <a target='blank' href={`https://warframe.fandom.com/wiki/Credits`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction} VS {worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.rewardTypes[0]}`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>) 
+: worldState.attackerReward.asString === "Orokin Catalyst Blueprint" && worldState.defenderReward.asString === "Orokin Reactor Blueprint"? (
+  (<div className="inv-content" key={index}>
+  <a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Catalyst`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction} VS {worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Reactor`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>)
+) :
+(<div className="inv-content" key={index}>
   <a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.rewardTypes[0]}`}>
 <img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
 </a>
@@ -79,7 +109,7 @@ const invasionRender = invasions.map((worldState, index) =>
 <a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.rewardTypes[1]}`}>
 <img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
 </a> 
-</div>)
+</div>))
 
 
 
