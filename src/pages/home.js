@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import steelEssence from '../images/SteelEssence.png'
 
 function Home() {
 
@@ -13,6 +14,7 @@ function Home() {
     const [invasions, setInvasions] = useState([])
     const [fissures, setFissures] = useState([])
     const [nightwave, setNightwave] = useState([])
+    const [steelPath, setSteelPath] = useState([])
     // const [isChecked, setIsChecked] = useState(false)
 
     // const handleChange = () => {
@@ -40,6 +42,7 @@ function Home() {
             setCambion(response.data.cambionCycle)
             setFissures(response.data.fissures)
             setNightwave(response.data.nightwave.activeChallenges)
+            setSteelPath(response.data.steelPath.currentReward)
         } else {
             console.log('error')
         }
@@ -69,24 +72,28 @@ const cetusRender = <div>{cetusCheck}</div>
 const vallisRender = <div>{vallisCheck}</div>
 const cambionRender = <div>{activeCheck} for {forCheck}</div>
 
+const steelPathItem = JSON.stringify(steelPath.name)
+const steelPathCost = JSON.stringify(steelPath.cost)
+const steelPathItemCheck = steelPathItem?.replace(/['"]+/g, '')
+const steelPathCostCheck = steelPathCost?.replace(/['"]+/g, '')
+
+const steelPathRender = 
+<div>{steelPathItemCheck} : {steelPathCostCheck} 
+<a className="sp-render" target='blank' href={`https://warframe.fandom.com/wiki/Steel_Essence`}>
+  
+<img className='sp-img' title='Steel Essence' alt='Steel Essence' src={steelEssence}></img>
+</a>
+</div>
+
 
 const invasionRender = invasions.map((worldState, index) => 
-worldState.attackingFaction === "Infested" && worldState.defenderReward.asString === "Mutalist Alad V Nav Coordinate"? (<div className="inv-content" key={index}>
-<a target='blank' href={`https://warframe.fandom.com/wiki/Credits`}>
-<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
-</a>
-{worldState.attackingFaction} VS {worldState.defendingFaction} 
-<a target='blank' href={`https://warframe.fandom.com/wiki/Mutalist_Alad_V_Nav_Coordinate`}>
-<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
-</a> 
-</div>) 
-: worldState.attackingFaction === "Infested"? (
+ worldState.attackingFaction === "Infested"? (
 <div className="inv-content" key={index}>
   <a target='blank' href={`https://warframe.fandom.com/wiki/Credits`}>
 <img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
 </a>
 {worldState.attackingFaction} VS {worldState.defendingFaction} 
-<a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.rewardTypes[0]}`}>
+<a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.defenderReward.asString.replace(/[0-9]/g, '')}`}>
 <img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
 </a> 
 </div>) 
@@ -101,15 +108,18 @@ worldState.attackingFaction === "Infested" && worldState.defenderReward.asString
 </a> 
 </div>)
 ) :
-(<div className="inv-content" key={index}>
-  <a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.rewardTypes[0]}`}>
+(
+<div className="inv-content" key={index}>
+<a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.attackerReward.asString.replace(/[0-9]/g, '')}`}>
 <img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
 </a>
 {worldState.attackingFaction} VS {worldState.defendingFaction} 
-<a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.rewardTypes[1]}`}>
+<a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.defenderReward.asString.replace(/[0-9]/g, '')}`}>
 <img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
 </a> 
-</div>))
+</div>
+)
+)
 
 
 
@@ -174,6 +184,8 @@ type='checkbox'
   <div className="col-content">{vallisRender}</div>
   <header className="col-head">CAMBION DRIFT</header>
   <div className="col-content">{cambionRender}</div>
+  <div className="col-head">STEEL PATH</div>
+  <div className="col-content">{steelPathRender}</div>
   </div>
   
   <div className="col col-inv">

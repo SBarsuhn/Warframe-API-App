@@ -79,4 +79,15 @@
     text-align: center;
     margin: 10px;
   }
+
+  .sp-img-mob {
+    height:20px;
+    margin-left:5px;
+    margin-right: 5px;
+      transform: translate(-0%,20%);
+  top: 50%;
+  left: 50%;
+  }
+  
+
   
