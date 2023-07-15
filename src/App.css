@@ -76,8 +76,25 @@ line-height: 1.5;;
 .col-inv {
   height: 100%;
   width: 350px;
-  text-align: center;
+  /* text-align: center; */
   vertical-align: center;
+}
+
+.inv-content {
+  padding:5px;
+  text-align: center;
+}
+
+.attacker, .defender {
+  display: inline-block;
+  width: 40%;
+}
+
+.vs {
+  font-weight: bolder;
+  font-size: larger;
+  display: inline-block;
+  text-align: center;
 }
 
 .col-lrg {
@@ -116,10 +133,6 @@ line-height: 1.5;;
 }
 
 
-
-.inv-content {
-  padding:5px;
-}
 
 .fis-content {
   display: flex;

@@ -89,34 +89,40 @@ const steelPathRender =
 const invasionRender = invasions.map((worldState, index) => 
  worldState.attackingFaction === "Infested"? (
 <div className="inv-content" key={index}>
+  <div className="attacker">
   <a target='blank' href={`https://warframe.fandom.com/wiki/Credits`}>
 <img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
 </a>
-{worldState.attackingFaction} VS {worldState.defendingFaction} 
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender"> {worldState.defendingFaction} 
 <a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.defenderReward.asString.replace(/[0-9]/g, '')}`}>
 <img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
-</a> 
+</a>
+</div>  
 </div>) 
 : worldState.attackerReward.asString === "Orokin Catalyst Blueprint" && worldState.defenderReward.asString === "Orokin Reactor Blueprint"? (
   (<div className="inv-content" key={index}>
+     <div className="attacker">
   <a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Catalyst`}>
 <img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
 </a>
-{worldState.attackingFaction} VS {worldState.defendingFaction} 
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender"> {worldState.defendingFaction} 
 <a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Reactor`}>
 <img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
 </a> 
+</div>
 </div>)
 ) :
 (
 <div className="inv-content" key={index}>
+<div className="attacker">
 <a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.attackerReward.asString.replace(/[0-9]/g, '')}`}>
 <img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
 </a>
-{worldState.attackingFaction} VS {worldState.defendingFaction} 
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
 <a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.defenderReward.asString.replace(/[0-9]/g, '')}`}>
 <img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
 </a> 
+</div> 
 </div>
 )
 )
