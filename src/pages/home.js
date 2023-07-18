@@ -101,17 +101,123 @@ const invasionRender = invasions.map((worldState, index) =>
 </div>) 
 : worldState.attackerReward.asString === "Orokin Catalyst Blueprint" && worldState.defenderReward.asString === "Orokin Reactor Blueprint"? (
   (<div className="inv-content" key={index}>
-     <div className="attacker">
+  <div className="attacker">
   <a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Catalyst`}>
 <img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
 </a>
-{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender"> {worldState.defendingFaction} 
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
 <a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Reactor`}>
 <img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
 </a> 
 </div>
 </div>)
-) :
+) 
+: worldState.attackerReward.asString === "Orokin Reactor Blueprint" && worldState.defenderReward.asString === "Orokin Reactor Blueprint"? (
+  (<div className="inv-content" key={index}>
+  <div className="attacker">
+  <a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Reactor`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Reactor`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>
+</div>)
+) 
+: worldState.attackerReward.asString === "Orokin Catalyst Blueprint" && worldState.defenderReward.asString === "Orokin Catalyst Blueprint"? (
+  (<div className="inv-content" key={index}>
+  <div className="attacker">
+  <a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Catalyst`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Catalyst`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>
+</div>)
+) 
+: worldState.attackerReward.asString === "Orokin Reactor Blueprint" && worldState.defenderReward.asString === "Orokin Catalyst Blueprint"? (
+  (<div className="inv-content" key={index}>
+  <div className="attacker">
+  <a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Reactor`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Catalyst`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>
+</div>)
+) 
+:
+worldState.attackerReward.asString === "Orokin Catalyst Blueprint" ? (
+  (<div className="inv-content" key={index}>
+  <div className="attacker">
+  <a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Catalyst`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.defenderReward.asString.replace(/[0-9]/g, '')}`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>
+</div>)
+) 
+: worldState.defenderReward.asString === "Orokin Catalyst Blueprint"? (
+  (<div className="inv-content" key={index}>
+  <div className="attacker">
+  <a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.attackerReward.asString.replace(/[0-9]/g, '')}`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/Orokin_Catalyst`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>
+</div>)
+) 
+: worldState.attackerReward.asString === "Orokin Reactor Blueprint"? (
+  (<div className="inv-content" key={index}>
+  <div className="attacker">
+  <a target='blank' href={`https://warframe.fandom.com/Orokin_Reactor`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/wiki/${worldState.defenderReward.asString.replace(/[0-9]/g, '')}`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>
+</div>)
+) 
+: worldState.defenderReward.asString === "Orokin Reactor Blueprint"? (
+  (<div className="inv-content" key={index}>
+  <div className="attacker">
+  <a target='blank' href={`https://warframe.fandom.com/${worldState.attackerReward.asString.replace(/[0-9]/g, '')}`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/wiki/Orokin_Reactor`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>
+</div>)
+) 
+: worldState.rewardTypes[0] === "vandal" || worldState.rewardTypes[1] === "wraith" || worldState.rewardTypes[0] === "wraith" || worldState.rewardTypes[1] === "vandal" ? (
+  (<div className="inv-content" key={index}>
+  <div className="attacker">
+  <a target='blank' href={`https://warframe.fandom.com/${worldState.attackerReward.asString.replace(/\b(?:Receiver|Stock|Barrel|Blueprint)\b/gi, '')}`}>
+<img className='inv-img' title={worldState.attackerReward.asString} alt={`(${worldState.attackerReward.asString}) `} src={worldState.attackerReward.thumbnail}></img>
+</a>
+{worldState.attackingFaction}</div> <div className="vs">VS</div> <div className="defender">{worldState.defendingFaction} 
+<a target='blank' href={`https://warframe.fandom.com/${worldState.defenderReward.asString.replace(/\b(?:Receiver|Stock|Barrel|Blueprint)\b/gi, '')}`}>
+<img className='inv-img' title={worldState.defenderReward.asString} alt={`(${worldState.defenderReward.asString})`} src={worldState.defenderReward.thumbnail}></img>
+</a> 
+</div>
+</div>)
+) 
+: 
 (
 <div className="inv-content" key={index}>
 <div className="attacker">
@@ -159,11 +265,11 @@ const rjFissureRender = fissures.map((worldState, index) =>
 const sortieRender = sortie.map((worldState, index) => <div key={index}>{worldState.missionType} : {worldState.modifier}</div>)
 
 const nightwaveRender = nightwave.map((worldState, index) => <div key={index}>
-<input 
+{/* <input 
 type='checkbox'
-// checked={isChecked}
-// onChange={handleChange}
-/>
+checked={isChecked}
+ onChange={handleChange}
+/> */}
 {worldState.desc}</div>)
 
 

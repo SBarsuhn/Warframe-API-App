@@ -76,7 +76,7 @@ line-height: 1.5;;
 .col-inv {
   height: 100%;
   width: 350px;
-  /* text-align: center; */
+  text-align: center;
   vertical-align: center;
 }
 
